@@ -1,0 +1,67 @@
+# http://www.kernel.org/pub/software/scm/git/docs/git-log.html#_pretty_formats
+# http://www.jukie.net/~bart/conf/gitconfig
+# http://nuclearsquid.com/writings/git-tricks-tips-workflows.html
+# https://github.com/gf3/dotfiles/blob/master/.gitconfig
+
+[alias]
+  a = add
+  aa = add --all
+  amend = commit --amend -C HEAD
+  br = branch
+  c = commit
+  ci = commit -m
+  cia = commit -am
+  co = checkout
+  di = diff
+  dt = difftool
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  lol = !git lola -10
+  la = log --branches --date=short --graph --all --pretty=format:'%Cred%h%Creset %Cblue%ad%Creset %C(yellow)%aN%Creset %s%C(bold green)%d%Creset'
+  l = !git la -10
+  lla = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  ll = !git lla -10
+  sl = !git log --no-merges --pretty=short --since="2011-04-25" --until="2011-05-01" | git shortlog
+  k = !gitk --all
+  sm = submodule
+  st = status
+  sts = status -s
+
+[apply]
+  whitespace = nowarn
+
+[branch]
+  autosetupmerge = true
+  autosetuprebase = always
+
+[color]
+  branch = true
+  diff = true
+  interactive = true
+  pager = true
+  status = true
+  ui = true
+
+[core]
+  autocrlf = input
+  safecrlf = warn
+
+[diff]
+  renames = copy
+
+[diff "ruby"]
+  funcname = ^ *\\(\\(class\\|module\\|def\\) .*\\)
+
+[difftool]
+  prompt = false
+
+[github]
+  token = GITHUB_TOKEN
+  user = GITHUB_USERNAME
+
+[push]
+  default = current
+
+[user]
+  editor = vim
+  email = rg+code@ravinggenius.com
+  name = "Raving Genius"
