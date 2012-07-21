@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 [[ -e ~/.gitconfig ]] && mv ~/.gitconfig ~/.gitconfig_$(date -u +%Y%m%d%H%M%S)
-ln -s ~/dotfiles/git/config ~/.gitconfig
+ln -s ~/dotfiles/_/git/config ~/.gitconfig
 echo 'git linked'
